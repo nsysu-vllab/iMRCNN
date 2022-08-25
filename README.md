@@ -62,7 +62,6 @@ python3 utils/cell_mask.py
 python3 SegPC_mIoU_evaluator/sub_and_eval_original/submission.py
 
 python3 SegPC_mIoU_evaluator/sub_and_eval_original/evaluate.py
-# if you want to evaluate only nu or cy you should 
 ```
 
 ## Acknowledgement
