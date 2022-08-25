@@ -1,1 +1,1 @@
-# iMRCNN
+# iMRCNN: Continual Instance Segmentation
