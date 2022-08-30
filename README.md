@@ -81,6 +81,31 @@ imrcnn (modified detectron2):
 step2:
 ```
 python3 Cascade_Mask_RCNN_X152/imrcnn_cascade.py
+--backbone Original 
+--train_data_root {path of training set}
+--training_json_path {path of COCO.json of training set}
+--val_data_root {path of validation set}
+--validation_json_path {path of COCO.json of validation set}
+--work_dir {path of model saved}
+--weight_folder {path of pretrained model}
+--weight_file  {file of pretrained model}
+--num_class {number of classes}
+--outKD --feaKD --PseudoLabel  {components that you can add in}
+```
+Example:
+```
+python3 Cascade_Mask_RCNN_X152/imrcnn_cascade.py 
+--backbone Original 
+--train_data_root /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/bsalf_cytoplasm/x
+--training_json_path /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/bsalf_cytoplasm/cCOCO.json
+--val_data_root /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/fsalf_cytoplasm/x
+--validation_json_path /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/fsalf_cytoplasm/cCOCO.json
+--work_dir /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/model_and_log/ model_and_log_step2
+--weight_folder /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/model_and_log/model_and_log_nuclei_CASCADE/
+--weight_file model_final.pth
+--num_class 2
+--outKD --feaKD --PseudoLabel
+
 ```
 
 ## Inference
