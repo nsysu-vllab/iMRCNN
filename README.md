@@ -57,6 +57,23 @@ mrcnn (original detectron2)
 step1:
 ```
 python3 Cascade_Mask_RCNN_X152/CMRCNN_X152_train.py
+--backbone Original 
+--train_data_root  {path of training set}
+--training_json_path  {path of COCO.json of training set}
+--val_data_root  {path of validation set}
+--validation_json_path {path of COCO.json of validation set}
+--work_dir {path of model saved}
+
+```
+Example:
+```
+python3 Cascade_Mask_RCNN_X152/CMRCNN_X152_train.py 
+--backbone Original 
+--train_data_root /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/fsalf_nuclei/x
+--training_json_path /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/fsalf_nuclei/nCOCO.json
+--val_data_root /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/bsalf_nuclei/x
+--validation_json_path /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/bsalf_nuclei/nCOCO.json
+--work_dir /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/model_and_log/model_and_log_step1
 ```
 
 imrcnn (modified detectron2):
