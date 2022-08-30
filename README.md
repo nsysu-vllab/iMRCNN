@@ -3,7 +3,27 @@
 ## Data preparation
 
 Download [SegPC](https://ieee-dataport.org/open-access/segpc-2021-segmentation-multiple-myeloma-plasma-cells-microscopic-images) Dataset
+```
+dataset_preparation_all.py: Generate a dataset on the separation of nucleus and cytoplasm.
+dataset_preparation_cytoplasm.py: Generate a cytoplasm-only dataset.
+dataset_preparation_nucleus.py: Generate a nucleus-only dataset.
+```
+Example commands of generating a nucleus-only dataset
+```
+python3 utils/dataset_preparation_nucleus.py 
+--img_root {path of the image set used to generate the dataset}
+--mask_root  {path of the ground truth set used to generate the dataset}
+--dest_root {path of the dataset saved}
 
+```
+Example:
+```
+python3 utils/dataset_preparation_nucleus.py 
+--img_root /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/train_step2 
+--mask_root /home/frank/Desktop/instance\ segmentation/Pytorch-UNet-master/data/bsalf_mask 
+--dest_root /home/frank/Desktop/instance\ segmentation/SegPC-2021-main/data/bsalf_nuclei
+
+```
 ## Installation
 
 Detectron2 installation:
